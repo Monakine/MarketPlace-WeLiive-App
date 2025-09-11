@@ -1,0 +1,13 @@
+{
+  "name": "trackplan-marketplace-webhook",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@azure/identity": "^4.11.1",
+    "node-fetch": "^3.3.2"
+  }
+}
