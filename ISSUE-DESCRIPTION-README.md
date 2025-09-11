@@ -40,6 +40,7 @@ This may be related to Azure AD configuration, token validation, or resource reg
 
 ## 📁 Repository Structure
 
+```
 /App Services/ 
   └─ /trackplan-fm-service-app-landing/ 
     └─ /Files/ 
@@ -52,7 +53,7 @@ This may be related to Azure AD configuration, token validation, or resource reg
       ├─ package.json 
       └─ /MarketplaceWebhook/ 
         └─ index.js
-
+```
 ## 📬 Notes
 
 This repository is temporarily public to assist Microsoft engineers in reviewing the activation flow and identifying the source of the error.  
