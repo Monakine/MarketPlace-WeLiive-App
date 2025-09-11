@@ -16,13 +16,13 @@ This may be related to Azure AD configuration, token validation, or resource reg
 
 ### 🔗 Reproduction Links
 
-- 1. [AppSource Offer Page](https://appsource.microsoft.com/fr-fr/marketplace/checkout/weliive1608646678514.trackplan_dimomaintfm_cmms_demand_app-private-test?tab=Overview)
+- 1 . [AppSource Offer Page](https://appsource.microsoft.com/fr-fr/marketplace/checkout/weliive1608646678514.trackplan_dimomaintfm_cmms_demand_app-private-test?tab=Overview)
   
   <img width="1188" height="869" alt="image" src="https://github.com/user-attachments/assets/0d319867-cb31-4102-ac3e-f18ea02ab517" />
 
-- 2. Microsoft login popup
+- 2 . Microsoft login popup
 
-- 3. [Landing Page with Token](https://trackplan-fm-service-app-landing.azurewebsites.net/activate?token=MGViMDk4NjEtMzBhYy00YmU4LWM4YWQtNzU4YjQzOTRlMzRkLDE3NTc2ODQxMzY0OTAs...)
+- 3 . [Landing Page with Token](https://trackplan-fm-service-app-landing.azurewebsites.net/activate?token=MGViMDk4NjEtMzBhYy00YmU4LWM4YWQtNzU4YjQzOTRlMzRkLDE3NTc2ODQxMzY0OTAs...)
 
   <img width="878" height="344" alt="image" src="https://github.com/user-attachments/assets/268dcd36-d017-447c-b8ec-e96189955ea7" />
 
@@ -55,5 +55,6 @@ This may be related to Azure AD configuration, token validation, or resource reg
 
 ## 📬 Notes
 
-This repository is private and shared with Microsoft engineers for debugging purposes.  
-Feel free to open issues or suggest changes directly.
+This repository is temporarily public to assist Microsoft engineers in reviewing the activation flow and identifying the source of the error.  
+It will be made private once the debugging process is finalized.
+
