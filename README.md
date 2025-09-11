@@ -1,8 +1,13 @@
 # Marketplace App – WeLiive Activation Flow
+# Issue description
 
 ## 🧩 Context
 
 This repository contains the source code and configuration files related to the activation flow of the **WeLiive** app purchased via Microsoft Marketplace.
+The purchased application originates from a custom solution we built using Microsoft Power Apps.  
+It was packaged and published to Microsoft Marketplace via AppSource as a SaaS offer.
+To validate the purchase and activation flow, we created a fully functional test offer with no cost.  
+This allowed us to simulate the complete user journey before publishing the final offer with active subscription pricing.
 
 After a user completes the purchase, they are redirected to a landing page with a token for account setup. However, the page currently returns an error and fails to complete the activation.
 
