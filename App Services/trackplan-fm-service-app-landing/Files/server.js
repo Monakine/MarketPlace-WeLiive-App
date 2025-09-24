@@ -33,7 +33,8 @@ async function getPublisherToken() {
     paramsV1.append("client_id", CLIENT_ID);
     paramsV1.append("client_secret", CLIENT_SECRET);
     paramsV1.append("grant_type", "client_credentials");
-    paramsV1.append("resource", "https://marketplaceapi.microsoft.com");
+    paramsV1.append("resource", "https://api.partner.microsoft.com");
+    // paramsV1.append("resource", "https://marketplaceapi.microsoft.com");
 
     const resV1 = await fetch(urlV1, {
       method: 'POST',
