@@ -21,9 +21,9 @@ ${body}
 }
 
 async function getPublisherToken() {
-  const { TENANT_ID, CLIENT_ID, CLIENT_SECRET } = process.env;
-  if (!TENANT_ID || !CLIENT_ID || !CLIENT_SECRET) {
-    throw new Error("Variables d'environnement manquantes (TENANT_ID, CLIENT_ID, CLIENT_SECRET)");
+  const { TENANT_ID, CLIENT_ID, MICROSOFT_PROVIDER_AUTHENTICATION_SECRET, PARTNER_CENTER_RESOURCE } = process.env;
+  if (!TENANT_ID || !CLIENT_ID || !MICROSOFT_PROVIDER_AUTHENTICATION_SECRET) {
+    throw new Error("Variables d'environnement manquantes (TENANT_ID, CLIENT_ID, MICROSOFT_PROVIDER_AUTHENTICATION_SECRET)");
   }
 
   // Try v1.0 with resource
@@ -31,9 +31,9 @@ async function getPublisherToken() {
     const urlV1 = `https://login.microsoftonline.com/${TENANT_ID}/oauth2/token`;
     const paramsV1 = new URLSearchParams();
     paramsV1.append("client_id", CLIENT_ID);
-    paramsV1.append("client_secret", CLIENT_SECRET);
+    paramsV1.append("client_secret", MICROSOFT_PROVIDER_AUTHENTICATION_SECRET);
     paramsV1.append("grant_type", "client_credentials");
-    paramsV1.append("resource", "https://api.partner.microsoft.com");
+    paramsV1.append("resource", PARTNER_CENTER_RESOURCE || "https://api.partner.microsoft.com");
     // paramsV1.append("resource", "https://marketplaceapi.microsoft.com");
 
     const resV1 = await fetch(urlV1, {
@@ -56,7 +56,7 @@ async function getPublisherToken() {
   const urlV2 = `https://login.microsoftonline.com/${TENANT_ID}/oauth2/v2.0/token`;
   const paramsV2 = new URLSearchParams();
   paramsV2.append("client_id", CLIENT_ID);
-  paramsV2.append("client_secret", CLIENT_SECRET);
+  paramsV2.append("client_secret", MICROSOFT_PROVIDER_AUTHENTICATION_SECRET);
   paramsV2.append("grant_type", "client_credentials");
   paramsV2.append("scope", "https://marketplaceapi.microsoft.com/.default");
 
